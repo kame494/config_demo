@@ -1,0 +1,33 @@
+server:
+  port: 8082
+eureka:
+  client:   #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://localhost:8888/eureka,http://localhost:8889/eureka,http://localhost:8890/eureka
+  instance:
+    prefer-ip-address: true                                  #访问路径可以显示IP地址
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+spring:
+  application:
+    name: consumer1
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream,health,info
+info:                                                         #在Eure页面访问info返回的信息的配置
+  app.name: consumer1
+  company.name: www.kame.com
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
