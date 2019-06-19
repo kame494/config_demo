@@ -31,3 +31,6 @@ info:                                                         #在Eure页面访�
   company.name: www.kame.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+test:
+  a1: Commit changes1
+  a2: Commit changes2
