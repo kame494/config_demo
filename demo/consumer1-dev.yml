@@ -32,5 +32,5 @@ info:                                                         #在Eure页面访�
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 test:
-  a1: Commit changes1111
-  a2: Commit changes2222
+  a1: Commit changes11111
+  a2: Commit changes22222
