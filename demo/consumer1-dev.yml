@@ -25,7 +25,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: hystrix.stream,health,info
+        include: hystrix.stream,health,info,refresh
 info:                                                         #在Eure页面访问info返回的信息的配置
   app.name: consumer1
   company.name: www.kame.com
