@@ -17,5 +17,5 @@ info:                                                         #在Eure页面访�
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 test:
-  p1: producer yoy122 testfresh111
-  p2: producer hjh222 testfresh222
+  p1: producer yoy122 
+  p2: producer hjh222
